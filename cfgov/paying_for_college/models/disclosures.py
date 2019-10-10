@@ -328,7 +328,6 @@ class School(models.Model):
             'underInvestigation': self.under_investigation,
             'url': self.url,
             'zip5': self.zip5,
-
         }
         for key in sorted(dict_out.keys()):
             ordered_out[key] = dict_out[key]

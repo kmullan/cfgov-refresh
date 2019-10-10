@@ -1,4 +1,3 @@
-# -*- coding: utf8 -*-
 from __future__ import unicode_literals
 
 import datetime
@@ -422,7 +421,6 @@ class ProgramExport(TestCase):
         with patch("six.moves.builtins.open", m, create=True):
             p.as_csv('/tmp.csv')
         self.assertEqual(m.call_count, 1)
-
 
 class SchoolCohortTest(TestCase):
     fixtures = ['test_fixture.json']
