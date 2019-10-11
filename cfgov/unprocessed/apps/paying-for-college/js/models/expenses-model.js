@@ -6,4 +6,3 @@ const expensesModel = {
 
 export {
   expensesModel
-};

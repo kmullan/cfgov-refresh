@@ -12,9 +12,15 @@ from django.utils import timezone
 import requests
 from paying_for_college.apps import PayingForCollegeConfig
 from paying_for_college.models import (
+<<<<<<< HEAD
     Alias, CollegeCostsPage, ConstantCap, ConstantRate, Contact, Feedback,
     Nickname, Notification, Program, RepayingStudentDebtPage, School,
     StudentLoanQuizPage, get_region, make_divisible_by_6
+=======
+    Alias, ConstantCap, ConstantRate, Contact, Feedback, Nickname,
+    Notification, Program, School, StudentResourcesPage, get_region,
+    make_divisible_by_6
+>>>>>>> Update paying for college models
 )
 
 from v1.models import HomePage
@@ -56,6 +62,7 @@ class PageModelsTest(TestCase):
             new_page.save()
             return new_page
         self.ROOT_PAGE = HomePage.objects.get(slug='cfgov')
+<<<<<<< HEAD
         self.loan_quiz_page = create_page(
             StudentLoanQuizPage,
             'Choosing a student loan',
@@ -64,10 +71,15 @@ class PageModelsTest(TestCase):
         )
         self.debt_page = create_page(
             RepayingStudentDebtPage,
+=======
+        self.debt_page = create_page(
+            StudentResourcesPage,
+>>>>>>> Update paying for college models
             'Repaying student debt',
             'repaying-student-debt',
             self.ROOT_PAGE
         )
+<<<<<<< HEAD
         self.college_costs_page = create_page(
             CollegeCostsPage,
             'Understanding college costs',
@@ -89,6 +101,19 @@ class PageModelsTest(TestCase):
         self.assertEqual(
             self.college_costs_page.get_template(HttpRequest()),
             'paying-for-college/college-costs.html')
+=======
+
+    def test_student_resources_get_template(self):
+        self.assertEqual(
+            self.debt_page.get_template(HttpRequest()),
+            'paying-for-college/{}.html'.format(self.debt_page.slug)
+        )
+
+    def test_student_resources_page_js(self):
+        self.assertIn(
+            'secondary-navigation.js',
+            self.debt_page.page_js)
+>>>>>>> Update paying for college models
 
 
 class SchoolRegionTest(TestCase):
@@ -422,12 +447,17 @@ class ProgramExport(TestCase):
             p.as_csv('/tmp.csv')
         self.assertEqual(m.call_count, 1)
 
+
 class SchoolCohortTest(TestCase):
     fixtures = ['test_fixture.json']
 
     def test_highest_degree_cohort(self):
         test_school = School.objects.get(pk=155317)
+<<<<<<< HEAD
         self.assertEqual(5, len(test_school.get_cohort('degrees_highest')))
+=======
+        self.assertEqual(4, len(test_school.get_cohort('degrees_highest')))
+>>>>>>> Update paying for college models
 
     def test_state_cohort(self):
         test_school = School.objects.get(pk=100636)
@@ -441,5 +471,10 @@ class SchoolCohortTest(TestCase):
     def test_get_cohort_rank(self):
         test_school = School.objects.get(pk=155317)
         self.assertEqual(4, len(test_school.get_cohort_rank('degrees_highest', 'grad_rate')))  # noqa
+<<<<<<< HEAD
         self.assertEqual(5, len(test_school.get_cohort_rank('degrees_highest', 'repay_3yr')))  # noqa
         self.assertEqual(5, len(test_school.get_cohort_rank('degrees_highest', 'median_total_debt')))  # noqa
+=======
+        self.assertEqual(4, len(test_school.get_cohort_rank('degrees_highest', 'repay_3yr')))  # noqa
+        self.assertEqual(4, len(test_school.get_cohort_rank('degrees_highest', 'median_total_debt')))  # noqa
+>>>>>>> Update paying for college models
