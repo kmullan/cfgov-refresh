@@ -6,3 +6,4 @@ const expensesModel = {
 
 export {
   expensesModel
+};
