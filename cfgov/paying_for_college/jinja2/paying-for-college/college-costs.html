@@ -940,11 +940,11 @@
         <section class="college-costs_tool-section" data-tool-section="cost-of-borrowing">
             <h2>What will interest cost me?</h2>
 
-            <p>Loans charge you interest.  You have to pay back the interest plusthe amount you originally borrowed. This page shows you an estimate of the total cost of your student debt over 10 and 25 years, the two most common time frames for student loans.</p>
+            <p>If you can reduce the amount you borrow, you'll save even more in the long run on interest payments. This page compares the total cost of your projected debt to the cost of borrowing a little less or a little more.</p>
 
             <img src="{{ static('apps/paying-for-college/img/ph-cost-of-borrowing.png') }}" style="margin: 30px 0">
 
-            <h3 class="header_bottom-line">Cost of paying back loans over 10 years</h3>
+            <h3 class="header_bottom-line">Cost of borrowing your loans</h3>
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
                     <span>Total money borrowed</span>
@@ -955,7 +955,7 @@
             </div>
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
-                    <span>Total interest payments</span>
+                    <span>Interest with 10-year repayment plan</span>
                 </div>
                 <div class="financial-item_input-wrapper">
                     <span class="financial-item_total" data-financial-itemX="">$20,053</span>
@@ -970,21 +970,21 @@
                 </div>
             </div>
 
-            <h3 class="header_bottom-line">Cost of paying back loans over 25 years</h3>
+            <h3 class="header_bottom-line">Cost of borrowing 10% more</h3>
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
                     <span>Total money borrowed</span>
                 </div>
                 <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total" data-financial-itemX="">$53,500</span>
+                    <span class="financial-item_total" data-financial-itemX="">$58,850</span>
                 </div>     
             </div>
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
-                    <span>Total interest payments</span>
+                    <span>Interest with 10-year repayment plan</span>
                 </div>
                 <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total" data-financial-itemX="">$56,885</span>
+                    <span class="financial-item_total" data-financial-itemX="">$22,058</span>
                 </div>
             </div>
             <div class="financial-item form-group_item">
@@ -992,15 +992,40 @@
                     <span>Total cost of borrowing</span>
                 </div>
                 <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total financial-item_total__debt" data-financial-itemX="">$110,385</span>
+                    <span class="financial-item_total financial-item_total__debt" data-financial-itemX="">$80,908</span>
                 </div>
             </div>
 
-            <div class="m-notification m-notification__visible">
-                {{ svg_icon('information-round') }}
+            <h3 class="header_bottom-line">Cost of borrowing 10% less</h3>
+            <div class="financial-item form-group_item">
+                <div class="financial-item_label-wrapper">
+                    <span>Total money borrowed</span>
+                </div>
+                <div class="financial-item_input-wrapper">
+                    <span class="financial-item_total" data-financial-itemX="">$48,150</span>
+                </div>     
+            </div>
+            <div class="financial-item form-group_item">
+                <div class="financial-item_label-wrapper">
+                    <span>Interest with 10-year repayment plan</span>
+                </div>
+                <div class="financial-item_input-wrapper">
+                    <span class="financial-item_total" data-financial-itemX="">$18,048</span>
+                </div>
+            </div>
+            <div class="financial-item form-group_item">
+                <div class="financial-item_label-wrapper">
+                    <span>Total cost of borrowing</span>
+                </div>
+                <div class="financial-item_input-wrapper">
+                    <span class="financial-item_total financial-item_total__debt" data-financial-itemX="">$66,198</span>
+                </div>
+            </div>
+            <div class="m-notification m-notification__visible m-notification__success ">
+                {{ svg_icon('dollar-round') }}
                 <div class="m-notification_content">
-                    <div class="h4 m-notification_message">Did you know?</div>
-                    <p>You can also lower the total cost of your loans by making payments towards the interest on your private and unsubsidized federal loans while you’re still in school. This will reduce the amount you pay due to <em>capitalization</em> — interest on your interest. </p>
+                    <div class="h4 m-notification_message">Money saving tip</div>
+                    <p>To lower the total cost of your loans, make room in your in-school budget for payments towards the interest on your private and unsubsidized federal loans. This will reduce the amount you pay due to <em>capitalization</em> — interest on your interest. </p>
                 </div>
             </div>
 
